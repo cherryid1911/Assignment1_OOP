@@ -12,6 +12,10 @@ public class IntegerScalar extends Scalar{
         return this.number;
     }
 
+    public Scalar add(Scalar s){
+        return s.add(this);
+    }
+
     @Override
     public Scalar add(IntegerScalar s){
         return new IntegerScalar(number+s.num());
@@ -21,6 +25,9 @@ public class IntegerScalar extends Scalar{
         return new RationalScalar(number*s.d()+s.n(),s.d());
     }
 
+    public Scalar mul(Scalar s){
+        return s.mul(this);
+    }
 
     @Override
     public Scalar mul(IntegerScalar s) {
