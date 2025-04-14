@@ -7,14 +7,11 @@ public class IntegerScalar extends Scalar{
     public IntegerScalar(int n){
         this.number=n;
     }
+    //getter
     public int num(){
         return this.number;
     }
 
-    @Override
-    public Scalar add(Scalar s) {
-        return s.add(this);
-    }
     @Override
     public Scalar add(IntegerScalar s){
         return new IntegerScalar(number+s.num());
@@ -24,10 +21,6 @@ public class IntegerScalar extends Scalar{
         return new RationalScalar(number*s.d()+s.n(),s.d());
     }
 
-    @Override
-    public Scalar mul(Scalar s) {
-        return s.mul(this);
-    }
 
     @Override
     public Scalar mul(IntegerScalar s) {

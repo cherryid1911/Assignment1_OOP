@@ -31,10 +31,6 @@ public class RationalScalar extends Scalar{
     }
 
     @Override
-    public Scalar add(Scalar s) {
-        return s.add(this);
-    }
-    @Override
     public Scalar add(IntegerScalar s){
         return s.add(this);
     }
@@ -43,10 +39,6 @@ public class RationalScalar extends Scalar{
         return new RationalScalar(s.d()*numerator+s.n()*denominator,s.d()*denominator);
     }
 
-    @Override
-    public Scalar mul(Scalar s) {
-        return s.mul(this);
-    }
 
     @Override
     public Scalar mul(IntegerScalar s) {
@@ -96,8 +88,5 @@ public class RationalScalar extends Scalar{
         }
         return false;
     }
-
-
-
 
 }

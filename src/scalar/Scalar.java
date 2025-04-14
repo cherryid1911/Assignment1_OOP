@@ -1,11 +1,15 @@
 package scalar;
 
 public abstract class Scalar {
-    public abstract Scalar add(Scalar s);
+    public Scalar add(Scalar s){
+        return s.add(this);
+    }
     public abstract Scalar add(IntegerScalar s);
     public abstract Scalar add(RationalScalar s);
 
-    public abstract Scalar mul(Scalar s);
+    public Scalar mul(Scalar s){
+        return s.mul(this);
+    }
     public abstract Scalar mul(IntegerScalar s);
     public abstract Scalar mul(RationalScalar s);
 
