@@ -2,14 +2,16 @@ package poly;
 import scalar.RationalScalar;
 import scalar.IntegerScalar;
 import scalar.Scalar;
+
+import java.util.HashMap;
 import java.util.Map;
 import java.util.TreeMap;
 
 public class Polynomial {
-    private TreeMap<Integer, Monomial> monomials;
+    private Map<Integer, Monomial> monomials;
 
     Polynomial(){
-        this.monomials = new TreeMap<Integer, Monomial>();
+        this.monomials = new HashMap<>()Map<Integer, Monomial>();
     }
 
     public TreeMap<Integer, Monomial> getMonomials() {
@@ -75,7 +77,7 @@ public class Polynomial {
             for (Monomial m2 : p.monomials.values()) {
 
                 Monomial m = m1.mul(m2);
-                int exp = m.getExponent(); // החזקה החדשה
+                int exp = m.getExponent();
 
                 if (product.monomials.containsKey(exp)) {
                     Monomial sum = product.monomials.get(exp).add(m);
