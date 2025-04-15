@@ -43,7 +43,7 @@ public class Monomial {
     public boolean equals(Object o){
         if (!(o instanceof Monomial)) return false;
         Monomial other = (Monomial) o;
-        return (this.exponent==other.getExponent()) && (this.coefficient==other.getCoefficient());
+        return (this.exponent==other.getExponent()) && (this.coefficient.equals(other.getCoefficient()));
     }
 
     public String toString() {
